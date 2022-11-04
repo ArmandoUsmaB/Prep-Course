@@ -82,7 +82,7 @@ function tienenMismaLongitud(str1="Hola", str2="Mundo") {
   // Devuelve "true" si las dos strings tienen la misma longitud
   // De lo contrario, devuelve "false"
   // Tu código:
-    if(length(str1)===length(str2)){
+    if((str1.length)===(str2.length)){
     return true;
   }
   return false;
@@ -187,20 +187,20 @@ function numeroRandom() {
   
 }
 
-function esPositivo(numero=5) {
+function esPositivo(numero) {
   //La función va a recibir un entero. Devuelve como resultado una cadena de texto que indica si el número es positivo o negativo. 
   //Si el número es positivo, devolver ---> "Es positivo"
   //Si el número es negativo, devolver ---> "Es negativo"
   //Si el número es 0, devuelve false
-  var negopos= false;
-  if(numero >0){
-    negopos= true;
-  } else {
-  negopos= false;
+  var negopos= "Es negativo";
+  if (numero===0){
+    return false;
+  }
+  else if(numero >0){
+    negopos= "Es positivo";
   }
   return negopos;
-  
-}
+  }
 
 function agregarSimboloExclamacion(str="Hola Armando") {
   // Agrega un símbolo de exclamación al final de la string "str" y devuelve una nueva string
@@ -262,6 +262,14 @@ function esVocal(letra){
   //que no se puede procesar el dato mediante el mensaje "Dato incorrecto".
   // Si no es vocal, tambien debe devolver "Dato incorrecto".
   //Escribe tu código aquí.
+  var isOk="Dato incorrecto";
+  if(letra.length==1){
+    if(letra==='a' || letra==='A' || letra==='e' || letra==='E' || letra==='i' || letra==='I' || letra==='o' || letra==='O' || letra==='u' || letra==='U')
+    {
+      isOk="Es vocal";
+    }
+  }
+  return isOk;
 }
 
 
