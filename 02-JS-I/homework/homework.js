@@ -195,8 +195,9 @@ function esPositivo(numero=5) {
   var negopos= false;
   if(numero >0){
     negopos= true;
-  }
+  } else {
   negopos= false;
+  }
   return negopos;
   
 }
